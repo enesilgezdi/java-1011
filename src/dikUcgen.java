@@ -3,20 +3,18 @@ import java.util.Scanner;
 
 public class dikUcgen {
     public static void main(String[] args) {
-        // Değişkenleri olusturalım
-
-        int a, b;
-        double c;
-
-        // Kullanıcadan verileri alalım
-
+        double a, b, c, u, cevre, alan;
         Scanner girdi = new Scanner(System.in);
-        System.out.print("1. Kenarı Giriniz : ");
+        System.out.println("1. kenar uzunluğu : ");
         a = girdi.nextInt();
-        System.out.print("2. Kenarı Giriniz : ");
+        System.out.println("2. kenar uzunluğu : ");
         b = girdi.nextInt();
+        System.out.println("3. kenar uzunluğu : ");
+        c = girdi.nextInt();
+        u = (a+b+c)/2;
+        cevre = 2*u;
+        alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        System.out.println("Alan : " + alan);
 
-        c = Math.sqrt((a*a) + (b*b));
-        System.out.println("hipotenus :" + c);
     }
 }

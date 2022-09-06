@@ -30,6 +30,7 @@ public class Main {
         int toplam = (mat + fizik + kimya + turkce + tarih + muzik );
         double sonuc = toplam / 6;
         System.out.println(sonuc >= 60 ? "sınıfı gecti" : "Sınıfta Kaldı");
+        System.out.print(sonuc);
 
 
 

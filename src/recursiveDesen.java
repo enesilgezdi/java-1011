@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class recursiveDesen {
-    static void five(int n) {
+    static void desen(int n) {
         int temp = n;
         int x = 0;
         if (temp > 1) {
@@ -18,10 +18,10 @@ public class recursiveDesen {
 
     public static void main(String[] args) {
         int n;
-        Scanner bjk = new Scanner(System.in);
-        System.out.println("Bir sayi girin :");
-        n = bjk.nextInt();
-        five(n);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Bir sayi giriniz :");
+        n = scan.nextInt();
+        desen(n);
 
     }
 }

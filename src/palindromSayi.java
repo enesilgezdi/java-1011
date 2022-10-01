@@ -21,7 +21,7 @@ public class palindromSayi {
 
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrom(9898));
+        System.out.println(isPalindrom(989));
 
     }
 }

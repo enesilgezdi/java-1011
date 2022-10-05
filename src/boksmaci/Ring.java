@@ -16,20 +16,20 @@ public class Ring {
     public void run() {
 
         if (checkWeight()) {
-            while (f1.health > 0 && f2.health > 0) {
+            while (this.f1.health > 0 && this.f2.health > 0) {
                 System.out.println("======== YENİ ROUND ===========");
                 int chance = Math.round((float)Math.random());
                 System.out.println("chance : "+chance);
                 if(chance ==0){
-                    f2.health = f1.hit(f2);
+                    this.f2.health = this.f1.hit(f2);
                     if (isWin())break;
-                    f1.health = f2.hit(f1);
+                    this.f1.health = this.f2.hit(f1);
                     if (isWin()) break;
                 }
                 if(chance ==1){
-                    f1.health = f2.hit(f1);
+                    this.f1.health = this.f2.hit(f1);
                     if (isWin()) break;
-                    f2.health = f1.hit(f2);
+                    this.f2.health = this.f1.hit(f2);
                     if (isWin()) break;
                 }
                 printScore();
@@ -40,15 +40,15 @@ public class Ring {
         }
     }
     public boolean checkWeight() {
-        return (f1.weight >= minWeight && f1.weight <= maxWeight) && (f2.weight >= minWeight && f2.weight <= maxWeight);
+        return (this.f1.weight >= minWeight && this.f1.weight <= maxWeight) && (this.f2.weight >= minWeight && this.f2.weight <= maxWeight);
     }
 
     public boolean isWin() {
-        if (f1.health == 0) {
-            System.out.println("Maçı Kazanan : " + f2.name);
+        if (this.f1.health == 0) {
+            System.out.println("Maçı Kazanan : " + this.f2.name);
             return true;
-        } else if (f2.health == 0){
-            System.out.println("Maçı Kazanan : " + f2.name);
+        } else if (this.f2.health == 0){
+            System.out.println("Maçı Kazanan : " + this.f1.name);
             return true;
         }
 
@@ -58,7 +58,7 @@ public class Ring {
 
     public void printScore() {
         System.out.println("------------");
-        System.out.println(f1.name + " Kalan Can \t:" + f1.health);
-        System.out.println(f2.name + " Kalan Can \t:" + f2.health);
+        System.out.println(this.f1.name + " Kalan Can \t:" + this.f1.health);
+        System.out.println(this.f2.name + " Kalan Can \t:" + this.f2.health);
     }
 }
